@@ -1,0 +1,100 @@
+body{
+    background-color: black;
+}
+.container
+{
+    padding: 5px 5px;
+    text-align: center;
+    background-color: beige;
+    border: double 5px black;
+    width: 50%;
+}
+#displayMonth
+{
+    display: inline-block;
+    text-align: left;
+}
+.month
+{
+    border: double 2px black;
+    width: 50%;
+    display: inline-block;
+    border-top: none;
+    border-left: none;
+    box-shadow: 10px 15px 3px gray;
+}
+.Result
+{
+    border: double 2px black;
+    width: 50%;
+    display: inline-block;
+    border-top: none;
+    border-left: none;
+    box-shadow: 10px 15px 3px gray;
+}
+.Color
+{
+    border: double 2px black;
+    width: 50%;
+    display: inline-block;
+    border-top: none;
+    border-left: none;
+    box-shadow: 10px 15px 3px gray;
+}
+.color-box{
+    width: 50%;
+    height: 50px;
+    display: block;
+    text-align: center;
+    line-height: 50px;
+    color: black;
+    font-weight: bold;
+    font-size: 20px;
+    margin: auto;
+    border: double 5px black;
+    border-top: none;
+    border-left: none;
+    box-shadow: 10px 15px 3px gray;
+    
+}
+.main1
+{
+    border: double black 5px;
+    width: 50%;
+    display: inline-block;
+    background-color: bisque;
+}
+
+.main2
+{
+    border: double black 5px;
+    width: 50%;
+    display: inline-block;
+    background-color: bisque;
+}
+
+.main3
+{
+    border: double black 5px;
+    width: 50%;
+    display: inline-block;
+    background-color: bisque;
+}
+.clock
+{   
+    text-align: right;
+    font-weight: bold;
+    font-size: 30px;
+    margin-right: 10px;
+   
+}
+
+.audio{
+    border: 3px solid black;
+    width: 40%;
+    margin: auto;
+    border-top: none;
+    border-left: none;
+    border-right: none;
+    box-shadow: 5px 10px 2px gray;
+}

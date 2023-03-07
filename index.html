@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Challenges</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous">
+    <link rel="stylesheet" href="css/challenge.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.3/font/bootstrap-icons.css">
+</head>
+<body>
+    <div class="container">
+
+        <div class="clock">
+            <div id = "clock" onload="currentTime()">
+            </div>
+        </div>
+        
+        <div class="audio">
+            <audio controls autoplay class="audiplay" nodownload>
+                <source src="media/audio.mp3" type="audio/mp3" loop autoplay>
+            </audio>
+        </div><br>
+
+        <div class="main1">
+            <h2 class="Color" style="background-color: aquamarine; margin-top: 20px;">CHALLENGE 1</h1>
+                <br>
+                <i class="bi bi-caret-down-fill" style="font-size: 55px;"></i>
+            <div id="rainbow" style="margin-bottom: 20px;"></div>
+        </div>
+
+
+            <br><br>
+        <div class="main2">
+            <h2 class="Result" style="background-color: lightblue; margin-top: 20px;">CHALLENGE 2</h1>
+                <br><br>
+                <i class="bi bi-caret-down-fill" style="font-size: 55px;"></i>
+            <p id="displayResult"></p>
+        </div>
+
+        <br>
+        <br>
+        <div class="main3">
+            <h2 class="month" style="background-color: lightcyan; margin-top: 20px;">CHALLENGE 3</h1>
+                <br><br>
+                <i class="bi bi-caret-down-fill" style="font-size: 55px;"></i>
+            <ol>
+                <il id="displayMonth"></il>
+            </ol>
+        </div>
+    </div>
+    
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js" integrity="sha384-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC+nuZB+EYdgRZgiwxhTBTkF7CXvN" crossorigin="anonymous"></script>
+    <script src="js/challenge.js"></script>
+    <script src="https://cdn.jsdelivr.net/gh/SH20RAJ/AudiPlay/audiplay.js"></script>
+</body>
+</html>
