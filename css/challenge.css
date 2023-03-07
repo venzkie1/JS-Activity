@@ -55,7 +55,7 @@ body{
     border-top: none;
     border-left: none;
     box-shadow: 10px 15px 3px gray;
-    
+    pointer-events: none;
 }
 .main1
 {
@@ -63,6 +63,7 @@ body{
     width: 50%;
     display: inline-block;
     background-color: bisque;
+    pointer-events: none;
 }
 
 .main2
@@ -71,6 +72,7 @@ body{
     width: 50%;
     display: inline-block;
     background-color: bisque;
+    pointer-events: none;
 }
 
 .main3
@@ -79,6 +81,7 @@ body{
     width: 50%;
     display: inline-block;
     background-color: bisque;
+    pointer-events: none;
 }
 .clock
 {   
@@ -86,6 +89,7 @@ body{
     font-weight: bold;
     font-size: 30px;
     margin-right: 10px;
+    pointer-events: none;
    
 }
 
