@@ -52,7 +52,7 @@ for (let i = 0; i < myColor.length; i++) //Loop through array lists
     colorBox.innerText = myColor[i]; //Set text content of colorBox element to the current color in the loop.
     container.appendChild(colorBox); // Append the color box element to the container element.
 }
-console.log(myColor)
+
 
 
 
