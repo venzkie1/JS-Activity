@@ -90,7 +90,9 @@ for(let a = 0; a<=11; a++ )
 
 
 // convert 0 - 11
-function getMonthName(monthNumber) {
+function getMonthName(monthNumber) 
+
+{
     const date = new Date();
         // to set the month of a date object to a specified number
         // value 1 is pass since the value always starts at 0
@@ -103,6 +105,10 @@ function getMonthName(monthNumber) {
   {
     console.log(getMonthName(i));
   }
+
+
+
+
 
 //   console.log(getMonthName(1)); // January
 //   console.log(getMonthName(2)); // February
