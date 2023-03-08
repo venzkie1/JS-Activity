@@ -85,3 +85,30 @@ for(let a = 0; a<=11; a++ )
    
 }
 
+
+
+
+
+// convert 0 - 11
+function getMonthName(monthNumber) {
+    const date = new Date();
+        // to set the month of a date object to a specified number
+        // value 1 is pass since the value always starts at 0
+    date.setMonth(monthNumber - 1);
+        // toLocaleString method gets the specified locale with options
+                                            // option to display what format the month will be
+    return date.toLocaleString('en-US', { month: 'long' });
+  }
+  
+  console.log(getMonthName(1)); // January
+  console.log(getMonthName(2)); // February
+  console.log(getMonthName(3)); // March
+  console.log(getMonthName(4)); // April
+  console.log(getMonthName(5)); // May
+  console.log(getMonthName(6)); // June
+  console.log(getMonthName(7)); // July
+  console.log(getMonthName(8)); // August
+  console.log(getMonthName(9)); // September
+  console.log(getMonthName(10)); // October
+  console.log(getMonthName(11)); // November
+  console.log(getMonthName(12)); // December
