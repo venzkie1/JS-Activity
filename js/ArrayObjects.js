@@ -5,40 +5,51 @@ let students = {
     email: `kevinmembreve32@gmail.com`,
     phone: 09123456789
 }
+// Displaying the object syntax: object.property
+document.write(`Name: ${students.firstName} ${students.lastName}<br>Email: ${students.email} <br>Phone: ${students.phone}<br>`);
 
-// Array of objects using constractor "let variable = new Object()"
+
+
+// create objects by instance
 let customer = new Object();
-
+// Array of objects using constructor "let variable = new Object()"
 customer.firstName = `Kebs`; //here we use semi-colon
 customer.middleName = `Pogay`;
 customer.lastName = `Katacute`; 
 
-document.write(`Name: ${students.firstName} ${students.lastName}<br>Email: ${students.email} <br>Phone: ${students.phone}<br>`);
+
+
+// Creating an object by using constructor
+function person(firstname, lname, emailadd, contact)
+// each element value can be design by using the This keyword, syntax: this.firstname
+// this keyword refers to the current object
+{
+    this.firstname = firstname;
+    this.lastname = lname;
+    this.email = emailadd;
+    this.phone = contact;
+    this.changePhone = changePhone;
+
+    // creating a function method syntax: function variable(variable){this.variable = variable}
+    function changePhone(otherNumber)
+    {
+        this.phone = otherNumber
+    }
+} 
+
+
+let employee = new person(`Louie`, `Martinez`, `louiemartinez@gmail.com`, `09123456789`);
+document.write(`<br><br>${employee.firstname}<br> ${employee.lastname} <br> ${employee.email}<br>${employee.phone}`);
 // document.write(`<br><br>${customer.firstName} ${customer.middleName} ${customer.lastName}`);
 
+let adik = new person(`Reynald`, `Fillar`, `reynaldfillar@gmail.com`, `09123456789`);
+document.write(`<br><br>Name: ${adik.firstname} ${adik.lastname} <br> Email: ${adik.email}<br>Phone: ${adik.phone}`);
 
+adik.changePhone(`09999122195`);
+document.write(`<br><br>${adik.firstname} <br>${adik.phone}`)
 
-
-// let car = [
-// {
-//     color: `Red`,
-//     type: `SUV`,
-//     capacity: 10,
-//     registration: `6-6-6`
-// },
-// {
-//     color: `Blue`,
-//     type: `VAN`,
-//     capacity: 8,
-//     registration: `3-3-3`
-// },
-// {
-//     color: `Green`,
-//     type: `Compact`,
-//     capacity: 6,
-//     registration: `4-0-4`
-// }
-// ]
+// let fname = prompt(`Enter First Name: `);
+// let lname = prompt(`Enter Last Name: `);
 
 let cars  = [
     {
@@ -88,7 +99,7 @@ let cars  = [
             return `<br>Large`;
         }
     })
-    document.write(carSize);
+    document.write(`<br><br>${carSize}`);
 
 
     // switch case
@@ -105,10 +116,90 @@ let carCap = cars.map(kotse =>{
 })
 document.write(`<br><br>${carCap}`)
 
+// map and function method if else
+let carB = cars.map(
+    function(kotscar)
+    {
+        if (kotscar.capacity <= 3)
+        {
+            return `<br>Small`;
+        }
+        else if (kotscar.capacity <= 5)
+        {
+            return `<br>Medium`
+        }
+        else
+        {
+            return `<br>Large`
+        }
+    }
+)
+document.write(`<br><br>${carB}`)
+
+// map and function method switch case
+let carD = cars.map(
+    function(cariton)
+    {
+        switch(true)
+        {
+            case cariton.capacity <=3:
+                return `<br>Small`;
+            case cariton.capacity <=5:
+                return `<br>Medium`;
+            default:
+                return `<br>Large`;
+        }
+    }
+)
+document.write(`<br><br>${carD}`)
 
 
 
 
+
+// If the result is negative, a is sorted before b.
+// If the result is positive, b is sorted before a.
+// If the result is 0, no changes are done with the sort order of the two values.
+// The compare function compares all the values in the array, two values at a time (a, b).
+// When comparing 40 and 100, the sort() method calls the compare function(40, 100).
+
+// The function calculates 40 - 100 (a - b), and since the result is negative (-60),  the sort function will sort 40 as a value lower than 100.
+
+// sort method
+cars.sort((a, b) => {
+    return a.capacity - b.capacity
+});
+cars.forEach((e) => {
+    document.write(`<br><br>Color: ${e.color} <br>Type: ${e.type} <br>Registration: ${e.registration} <br>Capacity: ${e.capacity}`)
+})
+
+
+
+document.write(`<h1>Car Array List</h1>`);
+document.write(
+    `<table>
+    <theader> 
+    <tr>
+    <th> Color </th>
+    <th> Type </th>
+    <th> Registration </th>
+    <th> Capacity </th>
+    </theader>`
+)
+cars.forEach(function(car)
+{    
+    // document.write(`<br><br>Color: ${car.color} Type: ${car.type} Registration: ${car.registration} Capacity: ${car.capacity}`);
+
+    // forIn
+    // key is a user defined variable that will represent the property eg. color,type,capacity
+    // object is car that is assigned in forEach function
+    document.write(`<tr>`);
+    for (const key in car) {
+       document.write(`<br><br><td>${key}: ${car[key]}</td>`);
+    }
+    document.write(`</tr>`);
+})
+document.write(`</table>`);
 
 
 
@@ -116,7 +207,7 @@ document.write(`<br><br>${carCap}`)
     let car = {
         color: `purple`,
         type: `Sports Car`,
-        registratio: `6-6-6`,
+        registration: `6-6-6`,
         capacity: 2
 
     }
