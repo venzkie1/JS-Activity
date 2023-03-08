@@ -99,16 +99,21 @@ function getMonthName(monthNumber) {
                                             // option to display what format the month will be
     return date.toLocaleString('en-US', { month: 'long' });
   }
-  
-  console.log(getMonthName(1)); // January
-  console.log(getMonthName(2)); // February
-  console.log(getMonthName(3)); // March
-  console.log(getMonthName(4)); // April
-  console.log(getMonthName(5)); // May
-  console.log(getMonthName(6)); // June
-  console.log(getMonthName(7)); // July
-  console.log(getMonthName(8)); // August
-  console.log(getMonthName(9)); // September
-  console.log(getMonthName(10)); // October
-  console.log(getMonthName(11)); // November
-  console.log(getMonthName(12)); // December
+  for(let i = 1; i<=12; i++)
+  {
+    console.log(getMonthName(i));
+  }
+
+//   console.log(getMonthName(1)); // January
+//   console.log(getMonthName(2)); // February
+//   console.log(getMonthName(3)); // March
+//   console.log(getMonthName(4)); // April
+//   console.log(getMonthName(5)); // May
+//   console.log(getMonthName(6)); // June
+//   console.log(getMonthName(7)); // July
+//   console.log(getMonthName(8)); // August
+//   console.log(getMonthName(9)); // September
+//   console.log(getMonthName(10)); // October
+//   console.log(getMonthName(11)); // November
+//   console.log(getMonthName(12)); // December
+
